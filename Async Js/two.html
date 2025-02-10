@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="end">Stop</button>
+  </body>
+  <script>
+    let intervalID; // Variable to store the interval ID
+
+    document.querySelector("#start").addEventListener("click", function () {
+      if (!intervalID) {
+        intervalID = setInterval(() => {
+          console.log("I am learning the JavaScript language",Date.now());
+        }, 1000);
+      }
+    });
+
+    document.querySelector("#end").addEventListener("click", function () {
+      clearInterval(intervalID);
+      intervalID = null; // Reset the interval ID
+      console.log("Stopped");
+    });
+  </script>
+</html>

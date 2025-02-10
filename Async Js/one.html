@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">Hello World</h1>
+    <button id="stop">Stop</button>
+    <script>
+      const hello = function () {
+        console.log("Ahmad Umar");
+      };
+      const changeHeading = function () {
+        document.querySelector("#heading").innerHTML = "Best Js Series";
+        console.log("changing");
+      };
+
+      const changeMe = setTimeout(changeHeading, 3000);
+
+      document.querySelector("#stop").addEventListener("click", function () {
+        clearTimeout(changeMe);
+        console.log("stop");
+      });
+    </script>
+  </body>
+</html>
